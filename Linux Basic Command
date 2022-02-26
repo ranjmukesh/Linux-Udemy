@@ -1,3 +1,38 @@
 # Connect remotely Linux Machine
   ssh -l ranjmukesh 192.168.44.139
 
+Manage File from the Command Line:
+Linux Filesystem: e.g. ext3, ext4, xfs: Linux Filesystem
+                       NTFS, FAT -> Windows Filesystem
+
+# Directory Listing Attribute:
+[root@master udemy]# cd /
+[root@master /]# ls -l
+total 32
+Type #ofLinks Ownner Group Size Month Day Time Name
+lrwxrwxrwx.   1 root root    7 Jun 22  2021 bin -> usr/bin
+dr-xr-xr-x.   5 root root 4096 Jan  3 15:33 boot
+drwxr-xr-x.  20 root root 3300 Feb  7 22:44 dev
+drwxr-xr-x. 158 root root 8192 Feb 26 09:43 etc
+drwxr-xr-x.   3 root root   24 Jan 28 12:27 home
+lrwxrwxrwx.   1 root root    7 Jun 22  2021 lib -> usr/lib
+lrwxrwxrwx.   1 root root    9 Jun 22  2021 lib64 -> usr/lib64
+drwxr-xr-x.   2 root root    6 Jan  4 12:14 lv1
+drwxr-xr-x.   3 root root 4096 Jan  4 12:17 lv2
+drwxr-xr-x.   2 root root    6 Jun 22  2021 media
+drwxr-xr-x.   3 root root   18 Jun 22  2021 mnt
+drwxr-xr-x.   3 root root   24 Jan 28 12:21 opt
+dr-xr-xr-x. 305 root root    0 Feb  7 22:44 proc
+drwxrwxrwx.   4 root root   34 Jan  3 21:42 rajouri
+dr-xr-x---.  25 root root 4096 Feb 26 10:25 root
+drwxr-xr-x.  49 root root 1500 Feb 26 09:43 run
+lrwxrwxrwx.   1 root root    8 Jun 22  2021 sbin -> usr/sbin
+drwxr-xr-x.   2 root root    6 Jun 22  2021 srv
+dr-xr-xr-x.  13 root root    0 Feb  7 22:44 sys
+drwxrwxrwt.  25 root root 4096 Feb 26 10:42 tmp
+drwxrwxrwx.   4 root root   43 Jan 28 22:46 u01
+drwxr-xr-x.  13 root root  158 Jan  3 15:16 usr
+drwxr-xr-x.  23 root root 4096 Jan  8 12:15 var
+
+
+
