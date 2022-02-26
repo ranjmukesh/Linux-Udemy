@@ -76,9 +76,76 @@ drwxr-xr-x.  23 root root 4096 Jan  8 12:15 var
   chown ranjmukesh:ranjmukesh george  # -rw-r--r--. 1 root       root          0 Feb 26 10:52 george
     -rw-r--r--. 1 ranjmukesh ranjmukesh    0 Feb 26 10:52 george
 
-# Soft Link & Hard Link
+# Soft Link & Hard Link (Sort-cut)
   -> inode : Pointer or number of a file on the hard disk
+  -> Soft Link : Link will be removed if file is removed or renamed
+  -> Hard Link : Deleting, removing or moving the original file will not affect the hard link
+  ln -- use to create hard link
+  ln -s  -- use to create soft link
   
+  e.g.  Soft Link
+  [root@master udemy]# pwd
+  /root/udemy
+  [root@master udemy]# ls -lrt hulk
+  -rw-r--r--. 1 root root 0 Feb 26 11:21 hulk
+  cd /tmp
+  ls -s /root/udemy/hulk
+  [root@master tmp]# ls -li --> inode
+  total 8
+  17120453 -rw-r--r--. 1 root root 34 Feb 26 11:02 david
+  17713745 -rw-r--r--. 1 root root  0 Feb 26 11:25 hulk
+   3782511 -rw-r--r--. 1 root root 34 Feb 26 11:01 puddy
+  [root@master tmp]# ls -lrti  --> inode
+  total 8
+   3782511 -rw-r--r--. 1 root root 34 Feb 26 11:01 puddy
+  17120453 -rw-r--r--. 1 root root 34 Feb 26 11:02 david
+  17713745 -rw-r--r--. 1 root root  0 Feb 26 11:25 hulk
+
+  #Hard Link
+  [root@master udemy]# touch hulk
+  [root@master udemy]# echo "hulk is a super hero"> hulk
+  [root@master udemy]# cat hulk
+  hulk is a super hero
+  
+  [root@master tmp]# ln /root/udemy/hulk
+  [root@master tmp]# ls -lrt
+  total 4
+  -rw-r--r--. 2 root root 21 Feb 26 11:32 hulk
+  [root@master tmp]# cat hulk
+  hulk is a super hero
+
+  [root@master udemy]# echo "123" >> hulk
+  [root@master udemy]# cat hulk
+  hulk is a super hero
+  123
+  
+  [root@master tmp]# cat hulk
+  hulk is a super hero
+  123
+  
+  [root@master udemy]# rm hulk
+  rm: remove regular file 'hulk'? y
+  [root@master udemy]# ls -lrt hulk
+  ls: cannot access 'hulk': No such file or directory
+  
+  [root@master tmp]# ls -rtl
+  total 4
+  -rw-r--r--. 1 root root 25 Feb 26 11:35 hulk
+  [root@master tmp]# cat hulk
+  hulk is a super hero
+  123
+  
+# Input & Output Redirectories
+  There are 2 redirects in Linux
+    1) Standard input (stdin) and it has file descriptor number as 0
+    2) Standard output (stdout) and it has file descriptor number as 1
+    3) Standard error (stderr) and it has file descriptor numnber as 2
+
+
+
+
+
+
     
     
   
