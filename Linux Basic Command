@@ -23,7 +23,7 @@ drwxr-xr-x.   2 root root    6 Jun 22  2021 media
 drwxr-xr-x.   3 root root   18 Jun 22  2021 mnt
 drwxr-xr-x.   3 root root   24 Jan 28 12:21 opt
 dr-xr-xr-x. 305 root root    0 Feb  7 22:44 proc
-drwxrwxrwx.   4 root root   34 Jan  3 21:42 rajouri
+drwxrwxrwx.   4 root root   34 Jan  3 21:42 rajouri   
 dr-xr-x---.  25 root root 4096 Feb 26 10:25 root
 drwxr-xr-x.  49 root root 1500 Feb 26 09:43 run
 lrwxrwxrwx.   1 root root    8 Jun 22  2021 sbin -> usr/sbin
@@ -33,6 +33,56 @@ drwxrwxrwt.  25 root root 4096 Feb 26 10:42 tmp
 drwxrwxrwx.   4 root root   43 Jan 28 22:46 u01
 drwxr-xr-x.  13 root root  158 Jan  3 15:16 usr
 drwxr-xr-x.  23 root root 4096 Jan  8 12:15 var
+
+#Creating Files and Directories
+  whoami
+  pwd
+  touch jerry
+  cp jerry lex
+  vi homer
+  touch bart lisa marge
+  
+  mkdir seinfeld
+  mkdir superman simpson
+
+#File Maintenance Commands:
+  cp
+  rm
+  mv
+  mkdir
+  rmdir or rm -r or rm -rf
+  chgrp
+  chown
+  
+  e.g.
+  cp george david
+  echo "david puddy is Elian's boy friend" > david
+  cat david
+    david puddy is Elian's boy friend
+  cp david /tmp
+  cat /tmp/david
+    david puddy is Elian's boy friend
+  rm apoho
+  mv lex luther
+  mv david puddy
+  mv puddy /tmp
+  mkdir gameofthrone
+  rmdir gameofthrone
+  rm -r gameofthrone
+  chgrp ranjmukesh jerry  # -rw-r--r--. 1 root root    0 Feb 26 10:50 jerry
+    -rw-r--r--. 1 root ranjmukesh    0 Feb 26 10:50 jerry
+  chown ranjmukesh jerry
+    -rw-r--r--. 1 ranjmukesh ranjmukesh    0 Feb 26 10:50 jerry  
+  chown ranjmukesh:ranjmukesh george  # -rw-r--r--. 1 root       root          0 Feb 26 10:52 george
+    -rw-r--r--. 1 ranjmukesh ranjmukesh    0 Feb 26 10:52 george
+
+# Soft Link & Hard Link
+  -> inode : Pointer or number of a file on the hard disk
+  
+    
+    
+  
+  
 
 
 
